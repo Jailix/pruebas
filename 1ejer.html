@@ -30,83 +30,99 @@
         .fila:nth-of-type(odd) div:nth-of-type(even){
             background-color: #333;
         }
-        .blanco{
-            color: white;
+        .peon{
+            width: 100px;
+            height: 100px;
         }
     </style>
+    <script>
+function mover(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function soltar(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
 </head>
 <body>
     <div class="centrar">
 
         <div class="fila">
-            <div>&#x2656;</div>
-            <div>&#x2658;</div>
-            <div>&#x2657;</div>
-            <div>&#x2655;</div>
-            <div>&#x2654;</div>
-            <div>&#x2657;</div>
-            <div>&#x2658;</div>
-            <div>&#x2656;</div>
+            <div id="a1" ondragover="mover(event)" ondrop="soltar(event)"><img id="i1" class="peon" draggable="true" src="torre.png" ondragstart="drag(event)"></div>
+            <div id="a2" ondragover="mover(event)" ondrop="soltar(event)"><img id="i2" class="peon" draggable="true" src="caballo.png" ondragstart="drag(event)"></div>
+            <div id="a3" ondragover="mover(event)" ondrop="soltar(event)"><img id="i3" class="peon" draggable="true" src="alfil.png" ondragstart="drag(event)"></div>
+            <div id="a4" ondragover="mover(event)" ondrop="soltar(event)"><img id="i4" class="peon" draggable="true" src="reina.png" ondragstart="drag(event)"></div>
+            <div id="a5" ondragover="mover(event)" ondrop="soltar(event)"><img id="i5" class="peon" draggable="true" src="torre.png" ondragstart="drag(event)"></div>
+            <div id="a6" ondragover="mover(event)" ondrop="soltar(event)"><img id="i6" class="peon" draggable="true" src="alfil.png" ondragstart="drag(event)"></div>
+            <div id="a7" ondragover="mover(event)" ondrop="soltar(event)"><img id="i7" class="peon" draggable="true" src="caballo.png" ondragstart="drag(event)"></div>
+            <div id="a8" ondragover="mover(event)" ondrop="soltar(event)"><img id="i8" class="peon" draggable="true" src="torre.png" ondragstart="drag(event)"></div>
         </div>
         <div class="fila">
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
-            <div>&#x2659;</div>
+            <div id="b1" ondragover="mover(event)" ondrop="soltar(event)"><img id="j1" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b2" ondragover="mover(event)" ondrop="soltar(event)"><img id="j2" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b3" ondragover="mover(event)" ondrop="soltar(event)"><img id="j3" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b4" ondragover="mover(event)" ondrop="soltar(event)"><img id="j4" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b5" ondragover="mover(event)" ondrop="soltar(event)"><img id="j5" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b6" ondragover="mover(event)" ondrop="soltar(event)"><img id="j6" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b7" ondragover="mover(event)" ondrop="soltar(event)"><img id="j7" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="b8" ondragover="mover(event)" ondrop="soltar(event)"><img id="j8" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
         </div>
         <div class="fila">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="c1" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c2" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c3" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c4" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c5" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c6" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c7" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="c8" ondragover="mover(event)" ondrop="soltar(event)"></div>
         </div>
         <div class="fila">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="d1" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d2" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d3" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d4" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d5" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d6" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d7" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="d8" ondragover="mover(event)" ondrop="soltar(event)"></div>
         </div>
         <div class="fila">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="f1" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f2" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f3" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f4" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f5" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f6" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f7" ondragover="mover(event)" ondrop="soltar(event)"></div>
+            <div id="f8" ondragover="mover(event)" ondrop="soltar(event)"></div>
         </div>
         <div class="fila">
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
-            <div class="blanco">&#x2659;</div>
+            <div id="g1" ondragover="mover(event)" ondrop="soltar(event)"><img id="k1" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g2" ondragover="mover(event)" ondrop="soltar(event)"><img id="k2" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g3" ondragover="mover(event)" ondrop="soltar(event)"><img id="k3" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g4" ondragover="mover(event)" ondrop="soltar(event)"><img id="k4" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g5" ondragover="mover(event)" ondrop="soltar(event)"><img id="k5" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g6" ondragover="mover(event)" ondrop="soltar(event)"><img id="k6" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g7" ondragover="mover(event)" ondrop="soltar(event)"><img id="k7" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
+            <div id="g8" ondragover="mover(event)" ondrop="soltar(event)"><img id="k8" class="peon" draggable="true" src="peon.png" ondragstart="drag(event)"></div>
         </div>
         <div class="fila">
-            <div class="blanco">&#x2656;</div>
-            <div class="blanco">&#x2658;</div>
-            <div class="blanco">&#x2657;</div>
-            <div class="blanco">&#x2655;</div>
-            <div class="blanco">&#x2654;</div>
-            <div class="blanco">&#x2657;</div>
-            <div class="blanco">&#x2658;</div>
-            <div class="blanco">&#x2656;</div>
+            <div id="h1" ondragover="mover(event)" ondrop="soltar(event)"><img id="l1" class="peon" draggable="true" src="torre.png" ondragstart="drag(event)"></div>
+            <div id="h2" ondragover="mover(event)" ondrop="soltar(event)"><img id="l2" class="peon" draggable="true" src="caballo.png" ondragstart="drag(event)"></div>
+            <div id="h3" ondragover="mover(event)" ondrop="soltar(event)"><img id="l3" class="peon" draggable="true" src="alfil.png" ondragstart="drag(event)"></div>
+            <div id="h4" ondragover="mover(event)" ondrop="soltar(event)"><img id="l4" class="peon" draggable="true" src="reina.png" ondragstart="drag(event)"></div>
+            <div id="h5" ondragover="mover(event)" ondrop="soltar(event)"><img id="l5" class="peon" draggable="true" src="rey.png" ondragstart="drag(event)"></div>
+            <div id="h6" ondragover="mover(event)" ondrop="soltar(event)"><img id="l6" class="peon" draggable="true" src="alfil.png" ondragstart="drag(event)"></div>
+            <div id="h7" ondragover="mover(event)" ondrop="soltar(event)"><img id="l7" class="peon" draggable="true" src="caballo.png" ondragstart="drag(event)"></div>
+            <div id="h8" ondragover="mover(event)" ondrop="soltar(event)"><img id="l8" class="peon" draggable="true" src="torre.png" ondragstart="drag(event)"></div>
         </div>
     </div>
 </body>
